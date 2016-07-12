@@ -23,6 +23,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.spring.version>4.1.9.RELEASE</project.spring.version>
+		<project.redis.version>1.6.4.RELEASE</project.redis.version>
 	</properties>
 
 	<dependencies>
@@ -33,14 +35,6 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-		<!-- Log4j -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-			<scope>provided</scope>
-		</dependency>
-		
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
@@ -58,20 +52,20 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
-			<version>1.4.0.RELEASE</version>
+			<version>${project.redis.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-oxm</artifactId>
 				</exclusion>
-				<exclusion>
+				<!-- <exclusion>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-tx</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-context-support</artifactId>
-				</exclusion>
+				</exclusion> -->
 				<exclusion>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-core</artifactId>
@@ -102,20 +96,5 @@
 			<version>1.0.4</version>
 		</dependency>
 
-		<!-- Spring -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>3.2.3.RELEASE</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>3.2.3.RELEASE</version>
-			<scope>provided</scope>
-		</dependency>
-		
 	</dependencies>
 </project>
